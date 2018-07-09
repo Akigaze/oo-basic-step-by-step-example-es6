@@ -8,5 +8,9 @@ export default class Class {
   equal(klass){
     return this.number===klass.number;
   }
-  assignLeader(){}
+  assignLeader(student){
+    if(this.equal(student.klass)){
+      this.leader=student;
+    }
+  }
 }

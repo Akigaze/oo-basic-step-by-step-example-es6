@@ -1,8 +1,8 @@
 
 import Person from "./person.js";
 export default class Teacher extends Person {
-  constructor(name,age,klass) {
-    super(name,age);
+  constructor(id,name,age,klass) {
+    super(id,name,age);
     this.klass=klass;
   }
   introduce(){
