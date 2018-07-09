@@ -13,7 +13,7 @@
   },
   "homepage": "https://school.thoughtworks.cn",
   "scripts": {
-    "test": "mocha spec/*_10/*.js --require babel/register --require source-map-support/register"
+    "test": "mocha spec/*_11/*.js --require babel/register --require source-map-support/register"
   },
   "dependencies": {
     "chai": "^4.1.2",
