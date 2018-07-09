@@ -32,7 +32,7 @@ export default class Teacher extends Person {
     if (student.isMe(klass.leader)) {
       console.log(`I am ${this.name}. I know ${student.name} become Leader of ${klass.getDisplayName()}.`);
     }else{
-      console.log(`I am ${this.name}. I know ${student.name} become Leader of ${klass.getDisplayName()}.`);
+      console.log(`I am ${this.name}. I know ${student.name} has joined ${klass.getDisplayName()}.`);
     }
   }
 }

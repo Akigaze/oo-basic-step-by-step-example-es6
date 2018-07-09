@@ -2,6 +2,7 @@ export default class Class {
   constructor(number) {
     this.number=number;
   }
+  callback(){};
   getDisplayName(){
     return `Class ${this.number}`;
   }
@@ -26,21 +27,22 @@ export default class Class {
     return this.equal(student.klass);
   }
   registerAssignLeaderListener(teacher){
-    if(!teacher.isMyClass(this)){
-      teacher.klasses.push(this);
-    };
+    this.regitTeacher(teacher);
     function tellTeacher(leader,klass) {
       teacher.response(leader,klass);
     }
     this.callback= tellTeacher;
   }
   registerJoinListener(teacher){
-    if(!teacher.isMyClass(this)){
-      teacher.klasses.push(this);
-    };
+    this.regitTeacher(teacher);
     function tellTeacher(student,klass) {
       teacher.response(student,klass);
     }
     this.callback= tellTeacher;
+  }
+  regitTeacher(teacher){
+    if(!teacher.isMyClass(this)){
+      teacher.klasses.push(this);
+    };
   }
 }
