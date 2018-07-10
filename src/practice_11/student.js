@@ -17,4 +17,7 @@ export default class Student extends Person{
       ?`I am Leader of ${this.klass.getDisplayName()}.`
       :`I am at ${this.klass.getDisplayName()}.`;
   }
+  updateClass(klz){
+    this.klass=klz;
+  }
 }

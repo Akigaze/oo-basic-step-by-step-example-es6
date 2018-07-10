@@ -25,14 +25,18 @@ export default class Teacher extends Person {
       });
   }
   isMyClass(klass){
-    //return this.klasses.some((klz)=> return klz.equal(klass); );
-    return true;
+    return this.klasses.some((klz)=> {
+      return klz.equal(klass);
+    });
   }
-  response(student,klass){
-    if (student.isMe(klass.leader)) {
-      console.log(`I am ${this.name}. I know ${student.name} become Leader of ${klass.getDisplayName()}.`);
-    }else{
-      console.log(`I am ${this.name}. I know ${student.name} has joined ${klass.getDisplayName()}.`);
-    }
+  responseNewLeader(leader,klass){
+      console.log(`I am ${this.name}. I know ${leader.name} become Leader of ${klass.getDisplayName()}.`);
+  }
+  responseNewMember(student,klass){
+    console.log(`I am ${this.name}. I know ${student.name} has joined ${klass.getDisplayName()}.`);
+    //return `I am ${this.name}. I know ${student.name} has joined ${klass.getDisplayName()}.`;
+  }
+  addClass(klass){
+    this.klasses.push(klass);
   }
 }
